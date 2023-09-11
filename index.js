@@ -16,9 +16,10 @@ const app = express();
 //Habilitar handlebars como view
 app.engine('handlebars',
     exphbs.engine({
-        defaultLayout: 'layout'
+        defaultLayout: 'layout',
+        helpers: require('./helpers/handlebars')
     })
-)
+);
 app.set('view engine', 'handlebars');
 
 //Static files
