@@ -1,38 +1,41 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400, 700, 900" rel="stylesheet">
-    <link rel="stylesheet" href="/css/app.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rubik:400, 700, 900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/app.css" />
     <title>{{nombrePagina}}</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="nombre-sitio contenedor">
-        <h1><a href="/">DevJobs</a></h1>
-        {{#if barra}}
+      <h1><a href="/">DevJobs</a></h1>
+      {{#if barra}}
         <div class="buscador">
-            <form action="#">
-                <input type="text" class="buscar">
-                <input type="submit" class="Buscar">
-            </form>
+          <form action="#">
+            <input type="text" class="buscar" />
+            <input type="submit" class="Buscar" />
+          </form>
         </div>
-        {{/if}}
+      {{/if}}
     </div>
     <header class="site-header contenedor separador">
-        <h2>{{nombrePagina}}</h2>
-        {{#if tagline}}
+      <h2>{{nombrePagina}}</h2>
+      {{#if tagline}}
         <p class="tagline">{{tagline}}</p>
-        {{/if}}
-        {{#if boton}}
+      {{/if}}
+      {{#if boton}}
         <a href="/vacantes/nueva" class="btn btn-azul">Publicar Nueva Vacante</a>
-        {{/if}}
+      {{/if}}
     </header>
     <div class="contenido-principal contenedor">
-        {{{body}}}
+      {{{body}}}
     </div>
-</body>
+  </body>
 
 </html>
