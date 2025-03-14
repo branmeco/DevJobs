@@ -8,8 +8,14 @@ const app = express();
 
 //Habilitar hadlebars como views
 app.engine('handlebars',
-    exphbs({
-        defaultLayout: 'layout'
+    exphbs.engine({
+        layoutsDir: './views/layouts/',
+        defaultLayout: 'layout',
+        extname: 'handlebars',
+        runtimeOptions: {
+            allowProtoPropertiesByDefault: true,
+            allowProtoMethodsByDefault:true,
+        }
     })
 );
 
